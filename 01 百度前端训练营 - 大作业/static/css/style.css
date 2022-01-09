@@ -1,0 +1,757 @@
+/* 全局 */
+
+body,
+section {
+    margin: 0;
+    width: 100%;
+}
+
+.inner-content {
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.disable-selection {
+    /* 禁止选中 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-gap {
+    column-gap: 30px;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+/* 头部导航 */
+
+.header {
+    width: 100%;
+    height: 50px;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+.header>.inner-content {
+    max-width: 1200px;
+    height: 100%;
+}
+
+.header-left,
+.header-left>img,
+.header-right {
+    height: 100%;
+}
+
+.header-left,
+.header-right {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-left {
+    width: 40%;
+}
+
+.header-right {
+    width: 60%;
+    text-align: right;
+}
+
+.header-left>span,
+.header-left>img,
+.header-right>a {
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.header-left>span,
+.header-right>a,
+.header-right>button {
+    color: white;
+}
+
+.header-left>span {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.header-left>img {
+    transform: scale(0.6);
+}
+
+.header-right>a,
+.header-right>button {
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.header-right>a {
+    text-decoration: none;
+    text-align: center;
+
+    padding: 18px 12px;
+
+    transition: background-color 200ms linear;
+}
+
+.header-right>a:hover {
+    color: rgb(235, 235, 235);
+    background-color: rgb(160, 160, 160, 0.75);
+}
+
+.header-right>a:active {
+    font-size: 12px;
+    letter-spacing: 5px;
+
+    padding-left: 13px;
+    padding-right: 11px;
+}
+
+.header-right>button {
+    width: 100px;
+    height: 30px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding: 0 0 0 5px;
+    margin-left: 8px;
+
+    border: rgb(0, 0, 0, 0) solid 3px;
+    border-radius: 8px;
+    background-color: rgb(48, 136, 255);
+
+    cursor: pointer;
+
+    transition: all 200ms linear;
+}
+
+.header-right>button:hover {
+    border-color: rgb(161, 202, 255);
+}
+
+/* 头图 */
+
+.screen {
+    width: 100%;
+    height: 0;
+
+    padding-bottom: 35%;
+
+    position: relative;
+    z-index: 1;
+
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+
+.screen-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 42px;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 3px gray;
+
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 报名表单 */
+
+.form-section>.inner-content {
+    max-width: 800px;
+
+    transform: translateY(-50%);
+
+    position: relative;
+
+    margin-bottom: -20px;
+}
+
+.form-con {
+    z-index: 3;
+}
+
+.form,
+#submit-info {
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 8px;
+
+    border: white solid 1px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(180, 180, 180);
+}
+
+.form>div {
+    display: inline-block;
+}
+
+.school,
+.grade,
+.email {
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.school .select,
+.grade .select,
+.email input {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    font-size: 14px;
+    width: 100%;
+    height: 35px;
+
+    margin-top: 8px;
+}
+
+.email input {
+    box-sizing: border-box;
+    padding: 0 4px;
+    border: transparent solid 1px;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+}
+
+.school {
+    width: 30%;
+}
+
+.grade {
+    width: 20%;
+}
+
+.email {
+    width: 40%;
+}
+
+.submit {
+    box-sizing: border-box;
+    padding: 6px 6px 8px;
+
+    width: 10%;
+
+    vertical-align: bottom;
+}
+
+#submit-button {
+    text-align: center;
+    line-height: 31px;
+    color: white;
+
+    box-sizing: border-box;
+    height: 35px;
+
+    border: rgb(0, 0, 0, 0) solid 2px;
+    border-radius: 8px;
+    background-color: rgb(48, 136, 255);
+
+    cursor: pointer;
+
+    transition: all 200ms linear;
+}
+
+#submit-button:hover {
+    background-color: white;
+    color: rgb(48, 136, 255);
+    border: rgb(48, 136, 255) solid 2px;
+}
+
+#submit-info>h2 {
+    text-align: center;
+}
+
+#submit-info>div {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+
+    color: gray;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.msg-con {
+    z-index: 2;
+}
+
+#msg-box {
+    display: none;
+}
+
+#msg-box[data-type="error"],
+#msg-box[data-type="success"] {
+    display: block;
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    text-align: center;
+}
+
+#msg-box[data-type="error"] {
+    border-color: red;
+    background-color: rgb(255, 222, 222);
+}
+
+#msg-box[data-type="success"] {
+    border-color: green;
+    background-color: rgb(222, 255, 222);
+}
+
+/* 我们的宗旨 */
+
+.hover-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-img>img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 100%;
+
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 160%;
+
+    padding-top: calc(100% + 20px);
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: all 300ms linear;
+}
+
+.hover-text:hover {
+    padding-top: 20px;
+    background-color: rgb(0, 0, 0, 60%);
+}
+
+/* 课程安排 */
+
+.courses-title {
+    text-align: center;
+}
+
+.courses-title>h2 {
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.courses-tabs {
+    text-align: right;
+}
+
+.courses-tabs>.tab {
+    display: inline-block;
+
+    color: rgb(160, 160, 160);
+    text-align: center;
+
+    width: 96px;
+
+    padding: 5px 0 5px;
+    cursor: pointer;
+}
+
+.courses-tabs>.tab.active {
+    color: black;
+    font-weight: bolder;
+}
+
+.tabs-bar {
+    text-align: right;
+}
+
+.tabs-bar>.bar {
+    display: inline-block;
+
+    width: 384px;
+    height: 2px;
+
+    background-color: rgb(180, 180, 180);
+}
+
+#active-bar {
+    margin-left: 0;
+    width: 96px;
+    height: 100%;
+    background-color: black;
+    transform: scaleY(150%);
+    transition: all 300ms linear;
+}
+
+#active-bar.position-1 {
+    margin-left: 96px;
+}
+
+#active-bar.position-2 {
+    margin-left: 192px;
+}
+
+#active-bar.position-3 {
+    margin-left: 288px;
+}
+
+.courses-lists {
+    width: 100%;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms linear;
+}
+
+.courses-list {
+    width: 100%;
+    position: absolute;
+    transition: all 300ms linear;
+}
+
+.courses-list.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.courses-list.left,
+.courses-list.right {
+    opacity: 0;
+}
+
+.courses-list.left {
+    transform: translateX(-100%);
+}
+
+.courses-list.right {
+    transform: translateX(100%);
+}
+
+.course {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.course>img,
+.course>.content {
+    vertical-align: top;
+}
+
+.course>img {
+    width: 120px;
+    box-sizing: border-box;
+    border: rgba(0, 0, 0, 0) solid 1px;
+    border-radius: 50%;
+}
+
+.course>.content {
+    display: inline-block;
+
+    box-sizing: border-box;
+
+    width: calc(100% - 120px);
+    padding: 0 20px;
+}
+
+.course>.content>h3 {
+    margin: 0;
+}
+
+.course>.content>.text {
+    font-size: 14px;
+    line-height: 180%;
+    text-align: justify;
+
+    margin: 10px 0;
+}
+
+span.html-tag::before,
+span.css-tag::before,
+span.js-tag::before {
+    display: inline-block;
+
+    height: 18px;
+
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+
+    border: rgba(0, 0, 0, 0) solid 1px;
+
+    border-radius: 5px;
+}
+
+span.html-tag::before {
+    content: "HTML";
+    width: 50px;
+    background-color: rgb(165, 187, 246);
+}
+
+span.css-tag::before {
+    content: "CSS";
+    width: 45px;
+    background-color: rgb(71, 151, 68);
+}
+
+span.js-tag::before {
+    content: "JavaScript";
+    width: 75px;
+    background-color: rgb(28, 72, 116);
+}
+
+/* 返回顶部按钮 */
+
+#to-top {
+    display: block;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    --bcc: black;
+    background-color: var(--bcc);
+
+    border: transparent solid 1px;
+    border-radius: 50%;
+
+    box-shadow: 1px 1px 1px 1px rgb(201, 201, 201);
+
+    cursor: pointer;
+
+    transition: all 200ms linear;
+}
+
+#to-top.out {
+    transform: translateX(70px);
+}
+
+#to-top::before,
+#to-top::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+
+    display: block;
+
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+#to-top::before {
+    border-width: 0px 8px 10px 8px;
+}
+
+#to-top::after {
+    border-width: 7px 8px 4px 8px;
+    border-bottom-color: var(--bcc);
+
+    transition: all 200ms linear;
+}
+
+#to-top:hover {
+    --bcc: orangered;
+}
+
+/* 底部 */
+
+footer {
+    background-color: rgb(222, 222, 222);
+    padding: 45px 0 60px;
+}
+
+footer>.inner-content>div {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+footer>.inner-content>div.left {
+    box-sizing: border-box;
+
+    width: 50%;
+
+    padding-left: 20px;
+
+    column-gap: 20px;
+}
+
+footer>.inner-content>div.right {
+    width: 50%;
+}
+
+footer .char {
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 45px;
+    height: 45px;
+
+    border: transparent solid 1px;
+    border-radius: 50%;
+
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+
+    background-color: rgb(45, 45, 45);
+}
+
+footer .col {
+    flex: 1;
+}
+
+footer .col>div {
+    margin: 18px 0;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .col>a {
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+footer .col>a:visited {
+    color: black;
+}
+
+/* 动画 */
+
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+}
+
+.animated {
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+/* 一些小小的媒体查询 */
+
+@media screen and (max-width: 1000px) {
+    .hover-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .hover-text {
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    .hover-text:hover {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hover-text {
+        font-size: 10px;
+        letter-spacing: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .hover-text:hover {
+        padding-top: 10px;
+    }
+}

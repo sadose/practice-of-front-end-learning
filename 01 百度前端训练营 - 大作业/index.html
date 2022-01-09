@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大森的百度前端训练营</title>
+
+    <link rel="shortcut icon" href="static/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/selector.css">
+</head>
+
+<body>
+    <!-- 头部导航 -->
+    <div class="header disable-selection">
+        <div class="inner-content">
+            <div class="header-left">
+                <img src="static/img/icon.png" alt="">
+                <span>百度前端训练营</span>
+            </div><div class="header-right">
+                <a href="">开发文档</a><a href="">交流中心</a><a href="">服务市场</a><a href="">开源联盟</a>
+                <button>管理中心</button>
+            </div>
+        </div>
+    </div>
+    <!-- 头图 -->
+    <div class="screen disable-selection">
+        <div class="screen-title">百度前端训练营2021开营啦！赶快报名吧！</div>
+    </div>
+    <!-- 报名表单 -->
+    <section class="form-section">
+        <div class="inner-content form-con">
+            <div class="form hidden" id="form">
+                <div class="school">
+                    <div>您的学校：</div>
+                    <div class="select" id="school-select"></div>
+                </div><div class="grade">
+                    <div>您的年级：</div>
+                    <div class="select" id="grade-select"></div>
+                </div><div class="email">
+                    <div>您的邮箱：</div>
+                    <div><input type="text" placeholder="请输入您的邮箱" id="email-input"></div>
+                </div><div class="submit">
+                    <div id="submit-button">报名</div>
+                </div>
+            </div>
+            <div class="hidden" id="submit-info" hidden>
+                <h2>报名成功！开始您的学习之旅吧！</h2>
+                <div id="re-signup">重新报名</div>
+            </div>
+        </div>
+        <div class="inner-content msg-con">
+            <div class="hidden" id="msg-box" data-type=""></div>
+        </div>
+    </section>
+    <!-- 我们的宗旨 -->
+    <section>
+        <div class="inner-content hidden">
+            <h2>我们的宗旨</h2>
+            <div class="flex flex-gap">
+                <div class="flex-item">
+                    <h3>独立思考</h3>
+                    <div class="hover-img disable-selection">
+                        <img src="static/img/sec1_img1.jpg" alt="">
+                        <div class="hover-text"><span>
+                            　　我们崇尚独立思考的精神，在探索学习的路上做个英雄，披荆斩棘到达终点。
+                            如果需要向大佬求助，请注意“提问的艺术”。
+                        </span></div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <h3>乐于实践</h3>
+                    <div class="hover-img disable-selection">
+                        <img src="static/img/sec1_img2.jpg" alt="">
+                        <div class="hover-text"><span>
+                            　　实践是检验真理的唯一标准。
+                            在学习的路上，请不断学习、不断编码，每一个技术大牛都是在实践中不断磨砺己身的。
+                        </span></div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <h3>总结回顾</h3>
+                    <div class="hover-img disable-selection">
+                        <img src="static/img/sec1_img3.jpg" alt="">
+                        <div class="hover-text"><span>
+                            　　前端的学习内容繁琐又细碎，只有懂得“温故而知新”的人才能在前端路上走得足够远。
+                        </span></div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <h3>分享交流</h3>
+                    <div class="hover-img disable-selection">
+                        <img src="static/img/sec1_img4.jpg" alt="">
+                        <div class="hover-text"><span>
+                            　　请帮助每一个小伙伴解决他们的难题，也许某一天他们也会帮得到你。
+                            因此不要放过每一个能够向别人分享知识的机会。
+                        </span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 课程安排 -->
+    <section>
+        <div class="inner-content hidden">
+            <div class="courses-title">
+                <h2>课程安排</h2>
+            </div>
+            <div class="courses-tabs disable-selection">
+                <div class="tab active" id="all-tab">
+                    全部
+                </div><div class="tab" id="html-tab">
+                    HTML
+                </div><div class="tab" id="css-tab">
+                    CSS
+                </div><div class="tab" id="js-tab">
+                    JavaScript
+                </div>
+            </div>
+            <div class="tabs-bar">
+                <div class="bar">
+                    <div id="active-bar"></div>
+                </div>
+            </div>
+            <div class="courses-lists">
+                <div class="courses-list active" id="all-courses"></div>
+                <div class="courses-list right" id="html-courses"></div>
+                <div class="courses-list right" id="css-courses"></div>
+                <div class="courses-list right" id="js-courses"></div>
+            </div>
+        </div>
+    </section>
+    <!-- 底部 -->
+    <footer>
+        <div class="inner-content">
+            <div class="left disable-selection">
+                <div class="char">I</div>
+                <div class="char">F</div>
+                <div class="char">E</div>
+            </div><div class="right">
+                <div class="col">
+                    <div>学习链接</div>
+                    <a href="http://ife.baidu.com/" target="_blank">百度前端技术学园</a>
+                    <a href="http://bit.baidu.com/index" target="_blank">百度技术培训中心</a>
+                    <a href="http://bit.baidu.com/courseRouteDetail?id=112" target="_blank">前端学习路线</a>
+                    
+                </div>
+                <div class="col">
+                    <div>作业展示</div>
+                    <a href="http://www.dasenbuling.cn/baidu/day2/" target="_blank">作业2 - Flex布局</a>
+                    <a href="http://www.dasenbuling.cn/baidu/day3/clock/" target="_blank">作业3 - 动态时钟</a>
+                    <a href="http://www.dasenbuling.cn/baidu/day3/todolist/" target="_blank">作业3 - TodoList</a>
+                    <a href="http://www.dasenbuling.cn/baidu/last/" target="_blank">大作业</a>
+                </div>
+                <div class="col">
+                    <div>常用文档</div>
+                    <a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN Web Docs</a>
+                    <a href="https://react.docschina.org/" target="_blank">React中文文档</a>
+                    <a href="https://cn.vuejs.org/" target="_blank">Vue.js中文官网</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 返回顶部按钮 -->
+    <div id="to-top" class="out"></div>
+
+    <script src="static/js/selector.js"></script>
+    <script src="static/js/load_data.js"></script>
+    <script src="static/js/scroll.js"></script>
+    <script src="static/js/tab.js"></script>
+    <script src="static/js/events.js"></script>
+</body>
+
+</html>

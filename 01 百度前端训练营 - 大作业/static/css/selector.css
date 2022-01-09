@@ -1,0 +1,259 @@
+/* 根标签 */
+
+.dasen-selector {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 选择标签 */
+
+.dasen-selector>.pointer {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 4px;
+
+    border: transparent solid 2px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background-color: rgb(235, 235, 235);
+
+    transition: all 300ms linear;
+}
+
+.dasen-selector>.pointer>label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateY(-1px);
+
+    cursor: pointer;
+}
+
+.dasen-selector.active>.pointer {
+    border-color: rgb(235, 235, 235);
+    border-left-color: rgb(235, 235, 235);
+    border-right-color: rgb(235, 235, 235);
+    border-radius: 5px 5px 0 0;
+
+    background-color: white;
+}
+
+/* 选择面板 */
+
+.dasen-selector>.options {
+    position: absolute;
+    top: calc(100% - 2px);
+
+    width: 500px;
+
+    padding: 3px;
+
+    border: rgb(235, 235, 235) solid 2px;
+    border-radius: 0 5px 5px 5px;
+
+    background-color: white;
+
+    opacity: 0;
+
+    transform: scale(0);
+    transform-origin: 0 0 0;
+
+    transition: all 200ms ease-in-out;
+}
+
+.dasen-selector>.options.small {
+    height: 180px;
+}
+
+.dasen-selector>.options.middle {
+    height: 300px;
+}
+
+.dasen-selector>.options.big {
+    height: 500px;
+}
+
+.dasen-selector.active>.options {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* 选择面板 - 取消按钮 */
+
+.dasen-selector>.options>.cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+
+    width: 16px;
+    height: 16px;
+
+    border: rgb(180, 180, 180) solid 2px;
+    border-radius: 50%;
+
+    transform: translate(50%, -50%);
+
+    font-size: 18px;
+    text-align: center;
+    line-height: 14px;
+    vertical-align: middle;
+    color: rgb(180, 180, 180);
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.dasen-selector>.options>.cancel::before {
+    content: "×";
+}
+
+.dasen-selector>.options>.cancel:hover {
+    border-color: red;
+    color: red;
+}
+
+/* 选择面板 - 分栏 */
+
+.dasen-selector>.options>.left,
+.dasen-selector>.options>.right {
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 100%;
+
+    vertical-align: bottom;
+}
+
+.dasen-selector>.options>.left {
+    width: 160px;
+
+    padding: 5px 10px;
+
+    overflow-y: auto;
+}
+
+.dasen-selector>.options>.right {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 340px;
+    height: 100%;
+
+    border-left: rgb(222, 222, 222) solid 2px;
+}
+
+/* 选择面板 - 左栏 */
+
+.dasen-selector>.options>.left>div {
+    margin: 5px 0;
+    padding: 5px;
+
+    border: transparent solid 1px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.dasen-selector>.options>.left>div:hover,
+.dasen-selector>.options>.left>div.active {
+    background-color: rgb(245, 245, 245);
+
+    border-color: rgb(235, 235, 235);
+
+    color: red;
+}
+
+/* 选择面板 - 右栏 */
+
+.dasen-selector>.options>.right>.right-con {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    padding: 15px 15px;
+
+    display: inline-flex;
+    row-gap: 10px;
+    column-gap: 5px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    overflow-y: auto;
+
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.dasen-selector>.options>.right>.right-con.active {
+    opacity: 1;
+
+    z-index: 1;
+}
+
+.dasen-selector>.options>.right>.right-con>div {
+    height: 18px;
+
+    padding: 1px 5px;
+
+    border: transparent solid 2px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+
+    background-color: rgb(112, 150, 255);
+
+    cursor: pointer;
+}
+
+.dasen-selector>.options>.right>.right-con>div:hover,
+.dasen-selector>.options>.right>.right-con>div.active {
+    background-color: white;
+
+    border-color: blue;
+}
+
+.dasen-selector>.options>.right>.right-con>div:hover {
+    color: blue;
+}
+
+.dasen-selector>.options>.right>.right-con>div.active {
+    color: tomato;
+}
+
+.dasen-selector>.options>.right>.right-con>div.active::after {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 1.1em;
+    height: 1.1em;
+
+    margin-left: 3px;
+
+    border: green solid 1px;
+    border-radius: 50%;
+
+    content: "√";
+
+    font-size: 1em;
+    font-weight: bolder;
+    vertical-align: middle;
+    line-height: 1em;
+    color: green;
+}
