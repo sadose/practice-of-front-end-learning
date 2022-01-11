@@ -1,0 +1,27 @@
+<!-- 这是 Selector 组件的测试页面，主页请访问 index.html -->
+
+<link rel="stylesheet" href="static/css/selector.css">
+<script src="static/js/selector.js"></script>
+
+<style>
+    #select {
+        width: 180px;
+        height: 30px;
+        margin-top: 20px;
+    }
+</style>
+
+<button onclick="selector.open()">展开选择框</button>
+<button onclick="selector.close()">收起选择框</button>
+<button onclick="alert(selector.getValue())">获取选中值</button>
+<button onclick="alert(selector.getTag())">获取选中标签</button>
+<button onclick="selector.reset()">重置选择菜单</button>
+<div id="select"></div>
+
+<script>
+    const selector = new Selector("select", {
+        "分类一": ["选项1-1", "选项1-2", "选项1-3"],
+        "分类二": ["选项2-1", "选项2-2", "选项2-3"],
+        "分类三": ["选项3-1", "选项3-2", "选项3-3"]
+    }, "请选择一个选项", "small");
+</script>

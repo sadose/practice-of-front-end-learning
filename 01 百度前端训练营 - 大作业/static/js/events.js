@@ -61,6 +61,7 @@ emailInput.addEventListener("keypress", (e) => {
 document.getElementById("re-signup").addEventListener("click", () => {
     // 重新报名
     msgBox.setAttribute("data-type", "");
+    window.localStorage.removeItem("signupStatus");
     submitInfo.setAttribute("hidden", "hidden");
     form.removeAttribute("hidden");
     schoolSelector.reset();

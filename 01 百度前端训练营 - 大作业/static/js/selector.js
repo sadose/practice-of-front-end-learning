@@ -194,11 +194,11 @@ class Selector {
         let rawSelector = new SelectorDasen(root, data, placeholder, size);
         let proxy = new Proxy(rawSelector, {
             get(t, p) {
-                let allowFun = ["open", "close", "getValue", "getValue", "reset"];
+                let allowFun = ["open", "close", "getValue", "getTag", "reset"];
                 if (allowFun.indexOf(p) >= 0) {
                     return t[p].bind(t);
                 }
-                return Reflect.get(...arguments);
+                return undefined;
             },
             set() {
                 return false;
