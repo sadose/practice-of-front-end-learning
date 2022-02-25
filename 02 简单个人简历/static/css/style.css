@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "title";
+    src: url("../font/title.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "subtitle";
+    src: url("../font/subtitle.ttf") format("truetype");
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+}
+
+header,
+section {
+    margin-bottom: 20px;
+}
+
+/* 简历头部 */
+
+header {
+    text-align: center;
+}
+
+header>h1 {
+    font-family: "title";
+    font-size: 40px;
+    text-shadow: 2px 2px 1px rgb(200, 200, 200);
+    letter-spacing: 10px;
+}
+
+header>.anchors>a {
+    font-family: "楷体";
+    font-size: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-decoration: none;
+}
+
+header>.anchors>a:link,
+:visited {
+    color: blue;
+}
+
+/* 简历主题内容 */
+
+section {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+section>h2 {
+    position: relative;
+    font-family: "subtitle";
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 5px 0;
+    border-bottom: blue solid 2px;
+}
+
+section>h2::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 14%;
+    transition: width 1s ease-in-out;
+}
+
+section>h2::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 24%;
+    transition: width 1s ease-in-out;
+}
+
+section.in>h2::before {
+    width: 14%;
+}
+
+section.in>h2::after {
+    width: 24%;
+}
+
+section:nth-child(2n+1)>h2 {
+    text-align: right;
+}
+
+section:nth-child(2n)>h2::before {
+    right: 5%;
+    bottom: 48%;
+    background-color: rgb(27, 197, 27);
+}
+
+section:nth-child(2n)>h2::after {
+    right: 9%;
+    bottom: 24%;
+    background-color: rgb(235, 205, 71);
+}
+
+section:nth-child(2n+1)>h2::before {
+    left: 5%;
+    bottom: 48%;
+    background-color: rgb(27, 197, 27);
+}
+
+section:nth-child(2n+1)>h2::after {
+    left: 9%;
+    bottom: 24%;
+    background-color: rgb(235, 205, 71);
+}
+
+/* 个人信息 */
+
+.info-detail {
+    display: flex;
+    width: 100%;
+}
+
+.info-detail>.info-items {
+    flex-grow: 1;
+    padding: 10px 0px 10px 3%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-row-gap: 10px;
+    align-items: center;
+}
+
+.info-item {
+    font-size: 16px;
+}
+
+.info-item>.label {
+    font-weight: bolder;
+}
+
+.info-detail>.photo {
+    width: 40%;
+    padding: 5px;
+    text-align: center;
+}
+
+.info-detail>.photo>img {
+    max-width: 160px;
+    width: 100%;
+    border: black solid 1px;
+}
+
+/* 个人简介 */
+
+.list {
+    padding: 10px 1%;
+}
+
+.list>ul {
+    font-size: 16px;
+}
+
+.list>ul>li {
+    margin: 10px 0;
+}
+
+/* 教育背景 */
+
+.education-detail {
+    padding: 20px 3%;
+}
+
+.education-detail,
+.education-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.title-and-date {
+    font-weight: bolder;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title-and-date>.title {
+    text-align: left;
+}
+
+.title-and-date>.date {
+    text-align: right;
+}
+
+/* 项目经历 */
+
+.experience-detail {
+    padding: 20px 3%;
+}
