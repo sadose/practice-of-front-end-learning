@@ -1,0 +1,162 @@
+/* 全局 */
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container>h2 {
+    text-align: center;
+}
+
+.border {
+    border: rgb(201, 201, 201) solid 2px;
+    border-radius: 10px;
+
+    padding: 15px 25px;
+}
+
+/* 添加Todo */
+
+.add-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-item>input {
+    box-sizing: border-box;
+    width: 60%;
+    margin-right: 10px;
+    padding: 3px 5px;
+}
+
+/* Todo列表 */
+
+.items-list {
+    padding-top: 0;
+}
+
+.items-list>div {
+    margin-bottom: 10px;
+}
+
+#ongoing-items:empty::before {
+    content: "这里空空如也，快去添加一个Todo吧！";
+}
+
+#completed-items:empty::before {
+    content: "这里空空如也，快去完成你的Todo吧！";
+}
+
+#ongoing-items>div,
+#completed-items>div {
+    display: flex;
+    align-items: center;
+    border: transparent solid 1px;
+    border-radius: 8px;
+    padding: 5px;
+    transition: all 200ms linear;
+}
+
+#ongoing-items>div:hover {
+    border: lightskyblue solid 1px;
+}
+
+#ongoing-items>div>label {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+#ongoing-items>div>span {
+    opacity: 0;
+}
+
+#ongoing-items>div:hover>span {
+    opacity: 1;
+}
+
+#completed-items>div:hover {
+    border: rgb(201, 201, 201) solid 1px;
+}
+
+#completed-items>div>label {
+    flex-grow: 1;
+    padding: 0 10px;
+    color: gray;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+#completed-items>div>span {
+    opacity: 0;
+}
+
+#completed-items>div:hover>span {
+    opacity: 1;
+}
+
+/* 按钮 */
+
+span.button::before {
+    display: inline-block;
+
+    width: 50px;
+    height: 20px;
+
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 200ms linear;
+}
+
+span.button.add-button::before {
+    content: "添加";
+
+    border: green solid 2px;
+    background-color: rgb(106, 177, 106);
+}
+
+span.button.add-button:hover:before {
+    border: green solid 2px;
+    background-color: transparent;
+    color: green;
+}
+
+span.button.delete-button::before {
+    content: "删除";
+
+    border: red solid 2px;
+    background-color: rgb(255, 120, 120);
+}
+
+span.button.delete-button:hover:before {
+    border: red solid 2px;
+    background-color: transparent;
+    color: red;
+}
+
+span.button.delete-button.completed::before {
+    content: "删除";
+
+    border: gray solid 2px;
+    background-color: rgb(180, 180, 180);
+}
+
+span.button.delete-button.completed:hover:before {
+    border: gray solid 2px;
+    background-color: transparent;
+    color: gray;
+}

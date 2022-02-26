@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大森的TodoList</title>
+
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>今日ToDo</h2>
+        <div class="border add-item">
+            <input type="text" placeholder="输入您的待办事项以添加到列表..." id="text-input">
+            <span class="button add-button" id="add-button"></span>
+        </div>
+        <div class="border items-list">
+            <h3>进行中</h3>
+            <div id="ongoing-items"></div>
+            <h3>已完成</h3>
+            <div id="completed-items"></div>
+        </div>
+    </div>
+
+    <script src="static/todo_items.js"></script>
+    <script src="static/events.js"></script>
+</body>
+</html>
